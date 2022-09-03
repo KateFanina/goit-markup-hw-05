@@ -89,7 +89,7 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-   font-weight: 500;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--comon-color);
 }
@@ -286,7 +286,7 @@ img {
   transition: transform var(--timing-duration);
   overflow: auto;
 }
-.flex-item-img:hover .overlay {
+.flex-link:hover .overlay {
   transform: translateY(0%);
 }
 
@@ -321,6 +321,7 @@ img {
 
 .flex-link:hover,
 .flex-link:focus {
+    transform: translateY(0%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -557,7 +558,7 @@ body .link {
   justify-content: center;
 }
 
-.filter-link .filter-btn {
+.filter-btn {
   padding: 6px 22px;
   display: inline-block;
   font-weight: 500;
@@ -569,15 +570,15 @@ body .link {
   transition: background-color var(--timing-duration), color var(--timing-duration),
     box-shadow var(--timing-duration);
 }
-.filter-link .filter-btn:hover,
-.filter-link .filter-btn:focus {
+.filter-btn:hover,
+.filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--title-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter-link .active {
+.filter-item .active {
   color: var(--title-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
