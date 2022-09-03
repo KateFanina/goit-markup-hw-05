@@ -70,15 +70,15 @@ body {
   margin-left: 50px;
 }
 .current::after {
-  content: "";
+  content: '';
   position: absolute;
-display: block;
-width: 100%;
-height: 4px;
-left: 0;
-bottom: 0;
-background-color: var(--accent-color);
-border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .list .item + .item {
@@ -188,6 +188,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 0;
+  transition: background-color var(--timing-duration);
 }
 
 /* Особливості */
@@ -267,6 +268,10 @@ img {
 }
 .overlay {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
   top: 0;
   left: 0;
   margin: 0;
@@ -275,8 +280,7 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  padding: 63px 24px;
-  text-align: center;
+  padding: 0 24px;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
@@ -301,19 +305,19 @@ img {
   position: absolute;
   bottom: 0px;
   padding: 27px 0;
-   font-weight: 700;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
   background: rgba(47, 48, 58, 0.8);
   width: 100%;
-  height: 70px;
   color: var(--title-text-color);
 }
 .flex-link {
   display: block;
   text-decoration: none;
   color: var(--comon-color);
+  transition: box-shadow var(--timing-duration);
 }
 
 .flex-link:hover,
@@ -454,7 +458,7 @@ img {
   border-radius: 4px;
   margin-bottom: 0;
   cursor: pointer;
-  transition: fill var(--timing-duration);
+  transition: fill var(--timing-duration), border var(--timing-duration);
 }
 
 /* Футер */
@@ -554,7 +558,7 @@ body .link {
   justify-content: center;
 }
 
-.filter-btn {
+.filter-link .filter-btn {
   padding: 6px 22px;
   display: inline-block;
   font-weight: 500;
@@ -566,10 +570,17 @@ body .link {
   transition: background-color var(--timing-duration), color var(--timing-duration),
     box-shadow var(--timing-duration);
 }
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-link .filter-btn:hover,
+.filter-link .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--title-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-link .active {
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -605,11 +616,10 @@ body .link {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden{
-   opacity: 0;
+.backdrop.is-hidden {
+  opacity: 0;
   visibility: hidden;
-   pointer-events: none;
-
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -624,7 +634,7 @@ body .link {
   border-radius: 4px;
 }
 
-.modal-close{
+.modal-close {
   position: absolute;
   background-color: transparent;
   width: 30px;
@@ -636,5 +646,5 @@ body .link {
   justify-content: center;
   right: 8px;
   top: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
