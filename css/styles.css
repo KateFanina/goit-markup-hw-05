@@ -286,7 +286,8 @@ img {
   transition: transform var(--timing-duration);
   overflow: auto;
 }
-.flex-link:hover .overlay {
+.flex-link:hover .overlay,
+.flex-link:focus .overlay {
   transform: translateY(0%);
 }
 
